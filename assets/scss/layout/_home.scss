@@ -1,0 +1,129 @@
+.home{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    width: 100%;
+    min-height: 80vh;
+    border-radius: 10px;
+    background-color: var(--White);
+    
+
+  &__sidebar{
+    background-image: url('/assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 1rem;
+    padding-top: 2rem;
+
+
+    .step{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-left: 3rem;
+      margin: 1.5rem 0;
+
+      &__info{
+
+        span{
+          font-size: 0.65rem;
+          font-weight: 500;
+          color: rgb(144, 192, 214);
+          text-transform: uppercase;
+        }
+        p{
+          margin: 0;
+          color: var(--White);
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+        }
+      }
+      &__num{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--White);
+        border: 1px solid var(--White);
+        border-radius: 50%;
+        font-weight: 500;
+        width: 30px;
+        height: 30px;
+      }
+      .active{
+        background-color: var(--LightBlue);
+        color: black;
+      }
+    }
+  }
+  &__main{
+    padding: 2rem 5rem 0 0;
+
+    //personal info
+    form{
+      display: flex;
+      flex-direction: column;
+
+      label{
+        padding-bottom: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--MarineBlue);
+      }
+      input{
+        margin-bottom: 1rem;
+        padding: 0.8rem 1rem;
+        border-radius: 5px;
+        border: 1px solid var(--LightGray);
+        outline-color: var(--MarineBlue);
+        color: var(--MarineBlue);
+        font-weight: 600;
+      }
+    }
+    //Select plan
+    .select_plan{
+      .plans{
+        .plan{
+          border: 1px solid var(--LightGray);
+          border-radius: 7px;
+          padding: 1rem 3rem 1rem 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+        .plan:hover{
+          border: 1px solid var(--MarineBlue);
+
+        }
+        .activePlan{
+          background-color: var(--Magnolia);
+          border: 1px solid var(--MarineBlue);
+        }
+      }
+      .radio{
+        margin: 2rem 0;
+        border-radius: 7px;
+        background-color: var(--Alabaster);
+
+        p{
+          font-weight: 500;
+          color: var(--CoolGray);
+          padding: 0 1rem;
+        }
+      }
+    }
+    //Thank You
+    .thank_you{
+      text-align: center;
+      padding-top: 8rem;
+
+      p{
+        color: var(--CoolGray);
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+}

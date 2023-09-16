@@ -1,0 +1,138 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+    background-color: var(--Magnolia);
+    padding: 0 20%;
+}
+p{
+    font-size: 1rem;
+}
+.flex{
+    display: flex;
+}
+.center{
+    align-items: center;
+}
+.space{
+    justify-content: center;
+}
+.sb{
+    justify-content: space-between;
+}
+.btn,
+.confirm,
+.back,
+.plan
+{
+    cursor: pointer;
+}
+.btn,
+.confirm {
+    color: var(--Magnolia);
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    font-weight: 700;
+}
+.btn{
+    background-color: var(--MarineBlue);
+  }
+  .confirm{
+    background-color: var(--PurplishBlue);
+  }
+  .confirm:hover{
+    background: linear-gradient(hsl(228, 100%, 84%), hsl(243, 100%, 62%));
+  }
+.back{
+    border: none;
+    background: transparent;
+    font-weight: 700;
+    color: var(--CoolGray);
+}
+.back:hover{
+    color: var(--MarineBlue);
+}
+.title{
+    padding-top: 2rem;
+    margin: 0;
+}
+.discrption{
+    color: var(--CoolGray);
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+h4{
+    color: var(--MarineBlue);
+    margin: 0;
+}
+span{
+    color: var(--CoolGray);
+    margin: 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1.1rem;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--MarineBlue);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 0.7rem;
+    width: 0.7rem;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 0.7rem;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .activeCheck{
+    color: var(--MarineBlue);
+    border: 1px solid red;
+  }
