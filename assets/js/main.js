@@ -45,17 +45,11 @@ function toPrevForm() {
     pages[currentActivePage].style.display = 'block';
   }
   
-  // Call toPrevForm when you want to go back to the previous step and page
-  
-backButton[0].addEventListener('click', () => {
-    toPrevForm()
-})
-backButton[1].addEventListener('click', () => {
-    toPrevForm()
-})
-backButton[2].addEventListener('click', () => {
-    toPrevForm()
-})
+// Call toPrevForm when you want to go back to the previous step and page  
+backButton[0].addEventListener('click', () => toPrevForm())
+backButton[1].addEventListener('click', () => toPrevForm())
+backButton[2].addEventListener('click', () => toPrevForm())
+
 
 //When click on confirm button steps end and the last page apears
 confirmButton.addEventListener('click', () => {

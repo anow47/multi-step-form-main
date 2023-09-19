@@ -1,6 +1,4 @@
 .home{
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
     width: 100%;
     min-height: 80vh;
     border-radius: 10px;
@@ -13,7 +11,7 @@
     background-size: contain;
     margin: 1rem;
     padding-top: 2rem;
-
+    width: 28%;
 
     .step{
       display: flex;
@@ -58,7 +56,9 @@
     }
   }
   &__main{
-    padding: 2rem 5rem 0 0;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
 
     //personal info
     form{
@@ -113,6 +113,93 @@
         }
       }
     }
+    //Pick add-ons
+    .pick_add_on{
+      border: 1px solid var(--LightGray);
+      border-radius: 7px;
+      margin: 1rem 0;
+      padding: 0.7rem 1rem;
+
+      .inside-box{
+        display: flex;
+        gap: 1rem;
+
+        input{
+          width: 1.2rem;
+        }
+
+      }
+      .pick{
+        
+        h4,p{
+          margin: 0.2rem;
+        }
+        p{
+          color: var(--CoolGray);
+          font-size: 0.8rem;
+        }
+      }
+      span{
+        color: var(--PurplishBlue);
+        font-weight: 500;
+      }
+    }
+    .add-on-active{
+      border: 1px solid var(--PurplishBlue);
+      background-color: var(--Magnolia);
+    }
+    // Finishing_up 
+    .summary{
+      .total_plan{
+        padding: 0.5rem 0;
+      }
+      .total{
+        padding: 1rem;
+        border-radius: 7px;
+        background-color: var(--Alabaster);
+        
+          h4{
+            color: var(--CoolGray);
+            font-weight: 500;
+            font-size: 0.9rem;
+          }
+          .y_or_m{
+            a{
+              color: var(--CoolGray);
+              font-weight: 500;
+            }
+            h4{
+              color: var(--MarineBlue);
+              font-weight: 600;
+            }
+          }
+          .first-span{
+            font-weight: 700;
+            color: var(--MarineBlue);
+          }
+        span{
+          color: var(--MarineBlue);
+        }
+        .hr{
+          border-top: 1px solid var(--LightGray);
+          margin: 0.5rem 0;
+        }
+      }
+      .total_price{
+        padding: 1rem;
+
+        p{
+          font-size: 0.8rem;
+          color: var(--CoolGray);
+          font-weight: 500;
+        }
+        span{
+          color: var(--PurplishBlue);
+          font-weight: 700;
+          font-size: 1.3rem;
+        }
+      }
+    }
     //Thank You
     .thank_you{
       text-align: center;
@@ -120,7 +207,7 @@
 
       p{
         color: var(--CoolGray);
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.5;
       }
     }

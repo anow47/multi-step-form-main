@@ -36,6 +36,11 @@ p{
 {
     cursor: pointer;
 }
+.buttons{
+  position: absolute;
+  width: 100%;
+  bottom: 1.5rem;
+}
 .btn,
 .confirm {
     color: var(--Magnolia);
@@ -56,14 +61,15 @@ p{
 .back{
     border: none;
     background: transparent;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--CoolGray);
+    font-size: 1rem;
 }
 .back:hover{
     color: var(--MarineBlue);
 }
 .title{
-    padding-top: 2rem;
+    padding-top: 3rem;
     margin: 0;
 }
 .discrption{
