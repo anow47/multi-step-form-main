@@ -1,19 +1,21 @@
 html{
     box-sizing: border-box;
     font-size: 100%;
-}
-*, *::before, *::after {
+  }
+  *, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 body{
     display: flex;
     align-items: center;
-    margin: 0;
     font-family: 'Ubuntu', sans-serif;
     min-height: 100vh;
     background-color: var(--Magnolia);
     padding: 0 20%;
 }
+
 p{
     font-size: 1rem;
 }
@@ -141,4 +143,22 @@ span{
   .activeCheck{
     color: var(--MarineBlue);
     border: 1px solid red;
+  }
+  
+  @media (max-width: 900px){
+    body{
+      padding: 0;
+      min-height: 80vh;
+    }
+    .title{
+      padding-top: 1.5rem;
+    }
+    .buttons{
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      padding: 1rem 0.4rem;
+    }
   }

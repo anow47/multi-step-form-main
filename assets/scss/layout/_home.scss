@@ -4,6 +4,10 @@
     border-radius: 10px;
     background-color: var(--White);
     
+    @media (max-width: 900px){
+      display: block;
+      background-color: var(--Magnolia);
+    }
 
   &__sidebar{
     background-image: url('../assets/images/bg-sidebar-desktop.svg');
@@ -13,12 +17,31 @@
     padding-top: 2rem;
     width: 28%;
 
+    @media (max-width: 900px){
+      background-image: url('../assets/images/bg-sidebar-mobile.svg');
+      background-size: cover;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding-top: 0;
+      padding-bottom: 70px;
+      
+      .step__info{
+        display: none;
+      } 
+    }
+
     .step{
       display: flex;
       align-items: center;
       gap: 1rem;
       padding-left: 3rem;
       margin: 1.5rem 0;
+      
+      @media (max-width: 900px){
+        padding: 0.5rem;
+      }
 
       &__info{
 
@@ -60,6 +83,15 @@
     width: 50%;
     margin: 0 auto;
 
+    @media (max-width:900px){
+      width: 88%;
+      border-radius: 10px;
+      bottom: 55px;
+      background-color: #fff;
+      padding: 0 20px;
+      padding-bottom: 0.4rem;
+    }
+
     //personal info
     form{
       display: flex;
@@ -88,9 +120,11 @@
           border: 1px solid var(--LightGray);
           border-radius: 7px;
           padding: 1rem 3rem 1rem 1rem;
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
+          display: block;
+
+          .plan_info{
+            padding-top: 2rem;
+          }
         }
         .plan:hover{
           border: 1px solid var(--MarineBlue);
@@ -110,6 +144,21 @@
           font-weight: 500;
           color: var(--CoolGray);
           padding: 0 1rem;
+        }
+      }
+      @media (max-width: 900px){
+
+        .plans{
+          display: block;
+          .plan{
+            display: flex;
+            margin: 1rem 0;
+
+            .plan_info{
+              padding-left: 1rem;
+              padding-top: 0;
+            }
+          }
         }
       }
     }
@@ -204,6 +253,11 @@
     .thank_you{
       text-align: center;
       padding-top: 8rem;
+
+      @media (max-width:900px){
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+      }
 
       p{
         color: var(--CoolGray);
