@@ -7,6 +7,7 @@ const userInput = document.querySelector("[name='username']")
 const emailInput = document.querySelector("[name='useremail']")
 const phoneInput = document.querySelector("[name='userphone']")
 
+
 let currentActivePage = 0
 let currentActiveNum = 0
 
@@ -28,7 +29,7 @@ function toNextForm () {
 
 function toPrevForm() {
     activeStepNum.forEach(el => {
-      el.classList.remove('active');
+    	el.classList.remove('active');
     });
   
     // Decrease the currentActiveNum to go back to the previous step
@@ -37,7 +38,7 @@ function toPrevForm() {
   
     // Hide all pages
     pages.forEach(el => {
-      el.style.display = 'none';
+    	el.style.display = 'none';
     });
   
     // Decrease the currentActivePage to go back to the previous page
@@ -51,6 +52,59 @@ backButton[1].addEventListener('click', () => toPrevForm())
 backButton[2].addEventListener('click', () => toPrevForm())
 
 
+//Step 1 personal information
+// Form inputs validation
+nextButton[0].addEventListener('click', () => {  
+    if(userInput.value !== "" && emailInput.value !== "" && phoneInput.value !== ""){
+        toNextForm()
+	}
+})
+
+//Step 2 Selct plan
+//Select your mothely plan or yearly plan
+nextButton[1].addEventListener('click', () => {
+	toNextForm()
+})
+
+const planList = document.querySelectorAll('.plan')
+planList.forEach(plan => {
+    plan.addEventListener('click', () => {
+        planList.forEach(el => {
+            el.classList.remove('activePlan')
+		})
+		plan.classList.add('activePlan')
+	})
+})
+//use toggle to change the value
+function showHidenPlan() {
+    const pickPlan = document.getElementById('pick')
+    const monthplan = document.querySelectorAll('.monthplan')
+    const yearplan = document.querySelectorAll('.yearplan')
+
+    if(pickPlan.checked){
+        monthplan.forEach(mo => {
+            mo.style.display = "none"
+        })
+        yearplan.forEach(yr => {
+            yr.style.display = "block"
+        })
+    }else{
+        monthplan.forEach(mo => {
+            mo.style.display = "block"
+        })
+        yearplan.forEach(yr => {
+            yr.style.display = "none"
+        })
+    }
+}
+
+//Step 3 Addons
+//Pick up oddons 
+nextButton[2].addEventListener('click', () => {
+  toNextForm()
+})
+
+//Step 4 Confirm Data
 //When click on confirm button steps end and the last page apears
 confirmButton.addEventListener('click', () => {
     const finishUp = document.querySelector('.Finishing_up')
@@ -58,20 +112,4 @@ confirmButton.addEventListener('click', () => {
 
     finishUp.style.display === "block"? finishUp.style.display = "none" : ""
     thankYou.style.display = "block"
-})
-
-// Form inputs validation
-nextButton[0].addEventListener('click', () => {  
-  toNextForm()
-    if(userInput.value !== "" && emailInput.value !== "" && phoneInput.value !== ""){
-  }
-})
-
-//Select your mothely plan or yearly plan
-nextButton[1].addEventListener('click', () => {
-    toNextForm()
-})
-//Pick up oddons 
-nextButton[2].addEventListener('click', () => {
-    toNextForm()
 })

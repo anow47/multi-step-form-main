@@ -1,6 +1,6 @@
 .home{
     width: 100%;
-    min-height: 80vh;
+    height: 500px;
     border-radius: 10px;
     background-color: var(--White);
     
@@ -111,6 +111,7 @@
         outline-color: var(--MarineBlue);
         color: var(--MarineBlue);
         font-weight: 600;
+        font-size: 1rem;
       }
     }
     //Select plan
@@ -119,11 +120,28 @@
         .plan{
           border: 1px solid var(--LightGray);
           border-radius: 7px;
-          padding: 1rem 3rem 1rem 1rem;
+          padding: 1rem 2rem 1rem 1rem;
+          width: 125px;
           display: block;
 
           .plan_info{
             padding-top: 2rem;
+          }
+          .monthplan{
+            display: block;
+            font-size: 0.9rem;
+            padding-top: 0.3rem;
+          }
+          .yearplan{
+            display: none;
+            font-size: 0.9rem;
+            padding-top: 0.3rem;
+          }
+          .year{
+            padding-top: 0.7rem;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: var(--MarineBlue);
           }
         }
         .plan:hover{
@@ -132,13 +150,14 @@
         }
         .activePlan{
           background-color: var(--Magnolia);
-          border: 1px solid var(--MarineBlue);
+          border: 1px solid var(--PurplishBlue);
         }
       }
       .radio{
         margin: 2rem 0;
         border-radius: 7px;
         background-color: var(--Alabaster);
+        padding: 1rem 0;
 
         p{
           font-weight: 500;
@@ -146,6 +165,7 @@
           padding: 0 1rem;
         }
       }
+
       @media (max-width: 900px){
 
         .plans{
@@ -153,6 +173,7 @@
           .plan{
             display: flex;
             margin: 1rem 0;
+            width: 100%;
 
             .plan_info{
               padding-left: 1rem;
