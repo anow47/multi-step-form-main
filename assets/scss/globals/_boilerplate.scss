@@ -22,13 +22,13 @@ p{
 .flex{
     display: flex;
 }
-.center{
+.align-center{
     align-items: center;
 }
-.space{
+.justify-center{
     justify-content: center;
 }
-.sb{
+.space-between{
     justify-content: space-between;
 }
 .btn,

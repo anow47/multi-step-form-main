@@ -104,6 +104,24 @@ nextButton[2].addEventListener('click', () => {
   toNextForm()
 })
 
+
+const allCheckboxs = document.querySelectorAll('.pick_add_on .inside-box input')
+const addActiveAddons = document.querySelectorAll('.pick_add_on')
+
+//add active the main div onclick and check in input checkbox with its index
+//but there's a bug! when user clicks on the acuall input check box, it works without the active calss.
+addActiveAddons.forEach((pick) => {
+    pick.addEventListener('click', () => {
+        allCheckboxs.forEach((input) => {
+            if(input === pick.querySelector('input')){
+                input.checked = !input.checked
+            }
+        })
+        pick.classList.toggle('add-on-active')
+    })
+})
+
+
 //Step 4 Confirm Data
 //When click on confirm button steps end and the last page apears
 confirmButton.addEventListener('click', () => {

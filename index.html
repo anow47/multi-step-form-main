@@ -11,7 +11,7 @@
   <title>Subscription Form</title>
 </head>
 <body>
-  <div class="home flex sb">
+  <div class="home flex space-between">
     <aside class="home__sidebar">
       <div class="step">
         <div class="step__num active">
@@ -62,7 +62,7 @@
           <label for="">Phone Number</label>
           <input type="text" name="userphone" placeholder="e.g. +1 234 567 890" required>
         </form>
-        <div class="buttons flex sb">
+        <div class="buttons flex space-between">
           <div></div>
           <button type="submit" class="btn">Next Step</button>
         </div>
@@ -70,7 +70,7 @@
       <div class="select_plan page" style="display: none;">
         <h1 class="title">Select your plan</h1>
         <p class="discrption">You have the option of monthly or yearly billing.</p>
-        <div class="plans flex sb">
+        <div class="plans flex space-between">
           <div class="plan activePlan">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>
             <div class="plan_info">
@@ -99,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="radio flex space center">
+        <div class="radio flex justify-center align-center">
           <p class="monthly">Monthly</p>
           <label class="switch">
             <input type="checkbox" id="pick" onchange="showHidenPlan()">
@@ -107,7 +107,7 @@
           </label>
           <p class="yearly">Yearly</p>
         </div>
-        <div class="buttons flex sb">
+        <div class="buttons flex space-between">
           <button class="back">Go Back</button>
           <button class="btn">Next Step</button>
         </div>
@@ -116,9 +116,9 @@
         <h1 class="title">Pick add-ons</h1>
         <p class="discrption">Add-ons help enhance your gaming experience.</p>
         <div class="picks">
-          <div class="pick_add_on flex center sb">
+          <div class="pick_add_on flex align-center space-between">
             <div class="inside-box">
-              <input type="checkbox">
+              <input type="checkbox" value="+$2/mo">
               <div class="pick">
                 <h4>Online service</h4>
                 <p>Access to multiplayer games</p>
@@ -126,9 +126,9 @@
             </div>
             <span>+$1/mo</span>
           </div>
-          <div class="pick_add_on flex center sb">
+          <div class="pick_add_on flex align-center space-between">
             <div class="inside-box">
-              <input type="checkbox">
+              <input type="checkbox" value="+$2/mo">
               <div class="pick">
                 <h4>Larger storage</h4>
                 <p>Extra 1TB of cloud save</p>
@@ -136,9 +136,9 @@
             </div>
             <span>+$2/mo</span>
           </div>
-          <div class="pick_add_on flex center sb">
+          <div class="pick_add_on flex align-center space-between">
             <div class="inside-box">
-              <input type="checkbox">
+              <input type="checkbox" value="+$2/mo">
               <div class="pick">
                 <h4>Customizable Profile</h4>
                 <p>Custom theme on your profile</p>
@@ -147,7 +147,7 @@
             <span>+$2/mo</span>
           </div>
         </div>
-        <div class="buttons flex sb">
+        <div class="buttons flex space-between">
           <button class="back">Go Back</button>
           <button class="btn">Next Step</button>
         </div>
@@ -157,7 +157,7 @@
         <p class="discrption">Double-check everything looks OK before confirming.</p>
         <div class="summary">
           <div class="total">
-            <div class="total_plan flex sb">
+            <div class="total_plan flex space-between">
               <div class="y_or_m">
                 <h4>Arcade(Monthly)</h4>
                 <a href="#">change</a>
@@ -165,21 +165,21 @@
               <span class="first-span">$9/mo</span>
             </div>
             <div class="hr"></div>
-            <div class="total_plan flex sb">
+            <div class="total_plan flex space-between">
               <h4>Online service</h4>
               <span>+$1/mo</span>
             </div>
-            <div class="total_plan flex sb">
+            <div class="total_plan flex space-between">
               <h4>Larger storage</h4>
               <span>+$2/mo</span>
             </div>
           </div>
-          <div class="total_price flex center sb">
+          <div class="total_price flex align-center space-between">
             <p>Total (per month/year)</p>
             <span>+$12/mo</span>
           </div>
         </div>
-        <div class="buttons flex sb">
+        <div class="buttons flex space-between">
           <button class="back">Go Back</button>
           <button class="confirm" type="submit">Confirm</button>
         </div>
