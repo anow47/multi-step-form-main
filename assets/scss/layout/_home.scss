@@ -239,13 +239,10 @@
             font-size: 0.9rem;
           }
           .y_or_m{
-            a{
-              color: var(--CoolGray);
-              font-weight: 500;
-            }
             h4{
               color: var(--MarineBlue);
               font-weight: 600;
+              display: flex;
             }
           }
           .first-span{
@@ -268,10 +265,10 @@
           color: var(--CoolGray);
           font-weight: 500;
         }
-        span{
+        .total-span{
           color: var(--PurplishBlue);
           font-weight: 700;
-          font-size: 1.3rem;
+          font-size: 1.1rem;
         }
       }
     }

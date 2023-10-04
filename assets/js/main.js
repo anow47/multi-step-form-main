@@ -131,3 +131,40 @@ confirmButton.addEventListener('click', () => {
     finishUp.style.display === "block"? finishUp.style.display = "none" : ""
     thankYou.style.display = "block"
 })
+
+const plan = [
+    {
+        arcade: [9, 90],
+        onlineService: [1, 10],
+        largerStorage: [2, 20],
+        total: [12, 120],
+    },
+]
+
+const summary = plan.map(item => {
+    return `
+        <div class="total">
+          <div class="total_plan flex space-between">
+            <div class="y_or_m">
+              <h4>Arcade(<span class="mo-span">Monthly</span><span>Yearly</span>)</h4>
+              <button class="change">change</button>
+            </div>
+            <span class="first-span mo-span">$${item.arcade[0]}/mo</span>
+          </div>
+          <div class="hr"></div>
+          <div class="total_plan flex space-between">
+            <h4>Online service</h4>
+            <span class="mo-span">+$${item.onlineService[0]}/mo</span>
+          </div>
+          <div class="total_plan flex space-between">
+            <h4>Larger storage</h4>
+            <span class="mo-span">+$${item.largerStorage[0]}/mo</span>
+          </div>
+        </div>
+        <div class="total_price flex align-center space-between">
+          <p class="flex">Total (per / <span class="mo-span">month</span><span class="yr-span">year</span>)</p>
+          <span class="total-span mo-span">+$${item.total[0]}/mo</span>
+        </div>
+    `
+})
+document.querySelector('.summary').innerHTML = summary
