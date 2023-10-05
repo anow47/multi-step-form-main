@@ -134,37 +134,57 @@ confirmButton.addEventListener('click', () => {
 
 const plan = [
     {
-        arcade: [9, 90],
-        onlineService: [1, 10],
-        largerStorage: [2, 20],
-        total: [12, 120],
+        label: ["mo"],
+        name: ["Monthly"],
+        planName: ["month"],
+        arcade: [1],
+        onlineService: [1],
+        largerStorage: [2],
+        total: [12],
     },
+    { 
+        label: ["yr"],
+        name: ["Yearly"],
+        planName: ["year"],
+        arcade: [90],
+        onlineService: [10],
+        largerStorage: [20],
+        total: [120],
+    }
 ]
+const summaryElement = document.querySelector('.summary')
+let currentIndex = 0
 
-const summary = plan.map(item => {
-    return `
+function updateSummary () {
+    const item = plan[currentIndex]
+    summaryElement.innerHTML =  `
         <div class="total">
-          <div class="total_plan flex space-between">
+        <div class="total_plan flex space-between">
             <div class="y_or_m">
-              <h4>Arcade(<span class="mo-span">Monthly</span><span>Yearly</span>)</h4>
-              <button class="change">change</button>
+            <h4>Arcade(<span>${item.name[0]}</span>)</h4>
+            <button class="change">change</button>
             </div>
-            <span class="first-span mo-span">$${item.arcade[0]}/mo</span>
-          </div>
-          <div class="hr"></div>
-          <div class="total_plan flex space-between">
-            <h4>Online service</h4>
-            <span class="mo-span">+$${item.onlineService[0]}/mo</span>
-          </div>
-          <div class="total_plan flex space-between">
+            <span class="first-span">$${item.arcade[0]}/${item.label[0]}</span>
+        </div>
+        <div class="hr"></div>
+        <div class="total_plan flex space-between">
+            <h4>Online service</h4>+$${item.onlineService[0]}/${item.label[0]}</span>
+        </div>
+        <div class="total_plan flex space-between">
             <h4>Larger storage</h4>
-            <span class="mo-span">+$${item.largerStorage[0]}/mo</span>
-          </div>
+            <span>+$${item.largerStorage[0]}/${item.label[0]}</span>
+        </div>
         </div>
         <div class="total_price flex align-center space-between">
-          <p class="flex">Total (per / <span class="mo-span">month</span><span class="yr-span">year</span>)</p>
-          <span class="total-span mo-span">+$${item.total[0]}/mo</span>
+        <p class="flex">Total (per <span class="ym-span">${item.planName[0]}</span>)</p>
+        <span class="total-span">+$${item.total[0]}/${item.label[0]}</span>
         </div>
     `
-})
-document.querySelector('.summary').innerHTML = summary
+}
+updateSummary()
+
+const changeButton = document.querySelector('.change')
+    changeButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % plan.length
+        updateSummary()
+    })
