@@ -232,13 +232,25 @@
         padding: 1rem;
         border-radius: 7px;
         background-color: var(--Alabaster);
-        
+
+          .item-span{
+            font-weight: 600;
+            font-size: 0.9rem;
+          }
           h4{
             color: var(--CoolGray);
             font-weight: 500;
             font-size: 0.9rem;
           }
           .y_or_m{
+            .change{
+              border: none;
+              background: transparent;
+              font-weight: 600;
+              color: var(--CoolGray);
+              border-bottom: 2px solid var(--CoolGray);
+              cursor: pointer;
+            }
             h4{
               color: var(--MarineBlue);
               font-weight: 600;

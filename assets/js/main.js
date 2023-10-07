@@ -161,23 +161,24 @@ function updateSummary () {
         <div class="total">
         <div class="total_plan flex space-between">
             <div class="y_or_m">
-            <h4>Arcade(<span>${item.name[0]}</span>)</h4>
-            <button class="change">change</button>
+                <h4>Arcade(<span>${item.name[0]}</span>)</h4>
+                <button class="change">Change</button>
             </div>
             <span class="first-span">$${item.arcade[0]}/${item.label[0]}</span>
         </div>
         <div class="hr"></div>
         <div class="total_plan flex space-between">
-            <h4>Online service</h4>+$${item.onlineService[0]}/${item.label[0]}</span>
+            <h4>Online service</h4>
+            <span class="item-span">+$${item.onlineService[0]}/${item.label[0]}</span>
         </div>
         <div class="total_plan flex space-between">
             <h4>Larger storage</h4>
-            <span>+$${item.largerStorage[0]}/${item.label[0]}</span>
+            <span class="item-span">+$${item.largerStorage[0]}/${item.label[0]}</span>
         </div>
         </div>
         <div class="total_price flex align-center space-between">
-        <p class="flex">Total (per <span class="ym-span">${item.planName[0]}</span>)</p>
-        <span class="total-span">+$${item.total[0]}/${item.label[0]}</span>
+            <p class="flex">Total (per <span class="ym-span">${item.planName[0]}</span>)</p>
+            <span class="total-span">+$${item.total[0]}/${item.label[0]}</span>
         </div>
     `
 }
