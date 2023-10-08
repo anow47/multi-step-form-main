@@ -1,12 +1,13 @@
 .home{
     width: 100%;
-    height: 500px;
+    min-height: 80vh;
     border-radius: 10px;
     background-color: var(--White);
     
     @media (max-width: 900px){
       display: block;
       background-color: var(--Magnolia);
+      min-height: 120vh;
     }
 
   &__sidebar{
