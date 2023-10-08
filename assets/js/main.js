@@ -55,8 +55,8 @@ backButton[2].addEventListener('click', () => toPrevForm())
 //Step 1 personal information
 // Form inputs validation
 nextButton[0].addEventListener('click', () => {  
-    toNextForm()
     if(userInput.value !== "" && emailInput.value !== "" && phoneInput.value !== ""){
+        toNextForm()
 	}
 })
 
