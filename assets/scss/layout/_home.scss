@@ -7,7 +7,7 @@
     @media (max-width: 900px){
       display: block;
       background-color: var(--Magnolia);
-      min-height: 120vh;
+      min-height: 100vh;
     }
 
   &__sidebar{
@@ -117,6 +117,11 @@
       ::placeholder{
         font-weight: 400;
         font-size: 0.8rem;
+      }
+      .error{
+        color: var(--StrawberryRed);
+        font-size: 0.7rem;
+        font-weight: 600;
       }
     }
     //Select plan

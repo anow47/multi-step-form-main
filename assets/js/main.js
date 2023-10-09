@@ -7,10 +7,8 @@ const userInput = document.querySelector("[name='username']")
 const emailInput = document.querySelector("[name='useremail']")
 const phoneInput = document.querySelector("[name='userphone']")
 
-
 let currentActivePage = 0
 let currentActiveNum = 0
-
 //this function gets the next form page and activate page number 
 function toNextForm () {
     activeStepNum.forEach(el => {
@@ -31,16 +29,13 @@ function toPrevForm() {
     activeStepNum.forEach(el => {
     	el.classList.remove('active');
     });
-  
     // Decrease the currentActiveNum to go back to the previous step
     currentActiveNum > 0 ? currentActiveNum-- : (currentActiveNum = activeStepNum.length - 1);
     activeStepNum[currentActiveNum].classList.add('active');
-  
     // Hide all pages
     pages.forEach(el => {
     	el.style.display = 'none';
     });
-  
     // Decrease the currentActivePage to go back to the previous page
     currentActivePage > 0 ? currentActivePage-- : (currentActivePage = pages.length - 1);
     pages[currentActivePage].style.display = 'block';
@@ -51,11 +46,24 @@ backButton[0].addEventListener('click', () => toPrevForm())
 backButton[1].addEventListener('click', () => toPrevForm())
 backButton[2].addEventListener('click', () => toPrevForm())
 
-
 //Step 1 personal information
 // Form inputs validation
-nextButton[0].addEventListener('click', () => {  
-    if(userInput.value !== "" && emailInput.value !== "" && phoneInput.value !== ""){
+const nameError = document.getElementById('nameError')
+const emailError = document.getElementById('emailError')
+const phoneError = document.getElementById('phoneError')
+
+nextButton[0].addEventListener('click', () => {
+    if(!userInput.value && userInput.length >= 5){
+        nameError.textContent = 'this field is required'
+        userInput.style.borderColor = "red"
+    }else if (!emailInput.value){
+        emailError.textContent = 'this field is required'
+        emailInput.style.borderColor = "red"
+        
+    } else if(!phoneInput.value){
+        phoneError.textContent = 'this field is required'
+        phoneInput.style.borderColor = "red"
+    } else{
         toNextForm()
 	}
 })
@@ -104,10 +112,8 @@ nextButton[2].addEventListener('click', () => {
   toNextForm()
 })
 
-
 const allCheckboxs = document.querySelectorAll('.pick_add_on .inside-box input')
 const addActiveAddons = document.querySelectorAll('.pick_add_on')
-
 //add active the main div onclick and check in input checkbox with its index
 //but there's a bug! when user clicks on the acuall input check box, it works without the active calss.
 addActiveAddons.forEach((pick) => {
@@ -120,7 +126,6 @@ addActiveAddons.forEach((pick) => {
         pick.classList.toggle('add-on-active')
     })
 })
-
 
 //Step 4 Confirm Data
 //When click on confirm button steps end and the last page apears
@@ -187,5 +192,5 @@ updateSummary()
 const changeButton = document.querySelector('.change')
     changeButton.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % plan.length
-        updateSummary()
-    })
+    updateSummary()
+})
