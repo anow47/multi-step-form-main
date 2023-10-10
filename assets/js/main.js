@@ -51,9 +51,9 @@ backButton[2].addEventListener('click', () => toPrevForm())
 const nameError = document.getElementById('nameError')
 const emailError = document.getElementById('emailError')
 const phoneError = document.getElementById('phoneError')
-
+//If the input field is empty, error message will apear on the form input
 nextButton[0].addEventListener('click', () => {
-    if(!userInput.value && userInput.length >= 5){
+    if(!userInput.value){
         nameError.textContent = 'this field is required'
         userInput.style.borderColor = "red"
     }else if (!emailInput.value){
@@ -66,6 +66,19 @@ nextButton[0].addEventListener('click', () => {
     } else{
         toNextForm()
 	}
+})
+//checks if the input is filled with info, removes the error message
+userInput.addEventListener('input', () => {
+    nameError.textContent = ''
+    userInput.style.borderColor = "#d6d9e6"
+})
+emailInput.addEventListener('input', () => {
+    emailError.textContent = ''
+    emailInput.style.borderColor = "#d6d9e6"
+})
+phoneInput.addEventListener('input', () => {
+    phoneError.textContent = ''
+    phoneInput.style.borderColor = "#d6d9e6"
 })
 
 //Step 2 Selct plan
