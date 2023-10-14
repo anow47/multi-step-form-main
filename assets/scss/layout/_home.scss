@@ -19,6 +19,7 @@
     width: 28%;
 
     @media (max-width: 900px){
+      position: absolute;
       background-image: url('../assets/images/bg-sidebar-mobile.svg');
       background-size: cover;
       width: 100%;
@@ -26,7 +27,7 @@
       justify-content: center;
       margin: 0;
       padding-top: 0;
-      padding-bottom: 70px;
+      padding-bottom: 100px;
       
       .step__info{
         display: none;
@@ -42,6 +43,8 @@
       
       @media (max-width: 900px){
         padding: 0.5rem;
+        margin-top: 0.8rem;
+        margin-bottom: 0;
       }
 
       &__info{
@@ -87,7 +90,7 @@
     @media (max-width:900px){
       width: 88%;
       border-radius: 10px;
-      bottom: 55px;
+      top: 105px;
       background-color: #fff;
       padding: 0 20px;
       padding-bottom: 0.4rem;
@@ -138,12 +141,6 @@
             padding-top: 2rem;
           }
           .monthplan{
-            display: block;
-            font-size: 0.9rem;
-            padding-top: 0.3rem;
-          }
-          .yearplan{
-            display: none;
             font-size: 0.9rem;
             padding-top: 0.3rem;
           }
@@ -175,7 +172,6 @@
           padding: 0 1rem;
         }
       }
-
       @media (max-width: 900px){
 
         .plans{
@@ -189,6 +185,13 @@
               padding-left: 1rem;
               padding-top: 0;
             }
+          }
+        }
+      }
+      @media (max-width: 480px){
+        .plans{
+          .plan{
+            margin: 0.6rem 0;
           }
         }
       }
