@@ -133,20 +133,22 @@
         .plan{
           border: 1px solid var(--LightGray);
           border-radius: 7px;
-          padding: 1rem 2rem 1rem 1rem;
+          padding: 1rem 2rem 0rem 1rem;
           width: 125px;
           display: block;
 
           .plan_info{
             padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
           }
-          .monthplan{
+          .priced-plan{
             font-size: 0.9rem;
             padding-top: 0.3rem;
           }
           .year{
-            padding-top: 0.7rem;
-            font-size: 0.7rem;
+            padding: 0.3rem 0;
+            font-size: 0.6rem;
             font-weight: bold;
             color: var(--MarineBlue);
           }
@@ -243,7 +245,7 @@
         background-color: var(--Alabaster);
 
           .item-span{
-            font-weight: 600;
+            font-weight: 500;
             font-size: 0.9rem;
           }
           h4{
